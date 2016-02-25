@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry
+		location="D:\workspace\project_test\libs\mysql-connector-java-5.1.25-bin.jar" />
+	<context id="mysql">
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" /><!-- 是否取消注释 -->
+			<property name="suppressDate" value="true" /> <!-- 是否生成注释代时间戳 -->
+		</commentGenerator>
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://10.1.2.66:3306/mock_trading" userId="root"
+			password="123456" />
+			
+		<javaModelGenerator targetPackage="com.generator.model"
+			targetProject="D:\mocktrading_trunk\web-generator\generator" />
+		<sqlMapGenerator targetPackage="com.generator.mapper"
+			targetProject="D:\mocktrading_trunk\web-generator\generator" />
+		<!--  
+		<javaClientGenerator targetPackage="com.geTest.client"
+			targetProject="project_test" type="XMLMAPPER" />
+		 -->	
+		<table schema="mock_trading" tableName="t_user_title" domainObjectName="UserTitle"
+			enableCountByExample="false" enableUpdateByExample="false"
+        	enableDeleteByExample="false" enableSelectByExample="false"
+        	selectByExampleQueryId="false"></table>
+	</context>
+</generatorConfiguration>
